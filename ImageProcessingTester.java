@@ -43,7 +43,7 @@ public class ImageProcessingTester {
         }
     }
 
-    private static void print(Color[][] image) {
+    public static void print(Color[][] image) {
         for (Color[] row : image) {
             for (Color pixel : row) {
                 System.out.print("(" + pixel.getRed() + "," + pixel.getGreen() + "," + pixel.getBlue() + ") ");
@@ -52,7 +52,7 @@ public class ImageProcessingTester {
         }
     }
 
-    private static void testFlippedHorizontally(String filename) {
+    public static void testFlippedHorizontally(String filename) {
         // Read the image from the file
         Color[][] sampleImage = Runigram.read(filename);
 
@@ -60,7 +60,7 @@ public class ImageProcessingTester {
         print(result);
     }
 
-    private static void testFlippedVertically(String filename) {
+    public static void testFlippedVertically(String filename) {
         // Read the image from the file
         Color[][] sampleImage = Runigram.read(filename);
 
@@ -68,7 +68,7 @@ public class ImageProcessingTester {
         print(result);
     }
 
-    private static void testGrayScaled(String filename) {
+    public static void testGrayScaled(String filename) {
         // Read the image from the file
         Color[][] sampleImage = Runigram.read(filename);
 
@@ -76,7 +76,7 @@ public class ImageProcessingTester {
         print(result);
     }
 
-    private static void testScaled1(String filename) {
+    public static void testScaled1(String filename) {
         // Read the image from the file
         Color[][] sampleImage = Runigram.read(filename);
 
@@ -86,7 +86,7 @@ public class ImageProcessingTester {
         System.out.println(result[0].length);
     }
 
-    private static void testScaled2(String filename) {
+    public static void testScaled2(String filename) {
         // Read the image from the file
         Color[][] sampleImage = Runigram.read(filename);
 
@@ -96,7 +96,7 @@ public class ImageProcessingTester {
         System.out.println(result[0].length);
     }
 
-    private static void testLuminance() {
+    public static void testLuminance() {
 
         Color color = new Color(255,255,255);
 
@@ -104,7 +104,7 @@ public class ImageProcessingTester {
         System.out.println(result);
     }
 
-    private static void testBlend(String filename1, String filename2) {
+    public static void testBlend(String filename1, String filename2) {
         // Read two images from the files
         Color[][] sampleImage1 = Runigram.read(filename1);
         Color[][] sampleImage2 = Runigram.read(filename2);
